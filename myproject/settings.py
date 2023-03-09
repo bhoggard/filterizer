@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ['FILTERIZER_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'bhoggard' not in os.environ['VIRTUAL_ENV']
+DEBUG = 'DEBUG' not in os.environ
 
 ALLOWED_HOSTS = ['*']
 
