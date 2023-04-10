@@ -72,5 +72,6 @@ group :test do
 end
 
 gem "standardrb", "~> 1.0"
-
 gem "trestle", "~> 0.9.8"
+
+gem "trestle-auth", "~> 0.4.4"
