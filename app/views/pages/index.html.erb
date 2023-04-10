@@ -1,0 +1,11 @@
+<h3>Neighborhoods</h3>
+
+<% @neighborhoods.includes(:events).each do |n| %>
+  <% next if n.events.empty? %>
+  <h4 class="neighborhood"><%= n.name %></h4>
+  <% n.events.includes(:venue).each do |e| %>
+    <h4><span class="title"><%= e.name %></span> at <a href="<%= e.url %>"><%= e.venue.name %></a></h4>
+      <p class="address"><%= e.venue.address %></p>
+      <p class="closes">closes <%= e.end_date.strftime("%B %d") %></p>
+  <% end %>
+<% end %>

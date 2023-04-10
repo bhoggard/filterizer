@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Filterizer</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body>
+    <section id="header">
+      <h2>FILTERIZER</h2>
+    </section>
+
+    <section id="main">
+      <%= yield %>
+    </section>
+
+    <section id="footer">
+      <p>A one-page art show recommendation website from <a href="https://twitter.com/bhoggard">@bhoggard</a> and <a href="https://twitter.com/wagnerblog">@wagnerblog</a>.</p>
+    </section>
+  </body>
+</html>
