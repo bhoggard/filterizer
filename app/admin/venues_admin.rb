@@ -3,6 +3,14 @@ Trestle.resource(:venues) do
     item :venues, icon: "fa fa-star"
   end
 
+  search do |query|
+    if query
+      Venue.where("name ILIKE ?", "%#{query}%")
+    else
+      Venue.all
+    end
+  end
+
   # Customize the table columns shown on the index view.
   #
   # table do
