@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
   belongs_to :venue
-  validates :name, :venue_id, :start_date, :end_date, presence: true
+  validates :title, :venue_id, :start_date, :end_date, presence: true
   validates :website, allow_blank: true, format: {with: URI::DEFAULT_PARSER.regexp[:ABS_URI]}
   validate :start_before_end
 
