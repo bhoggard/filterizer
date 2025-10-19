@@ -1,4 +1,4 @@
-DIR = "#{ENV["HOME"]}/Downloads/filterizer/".freeze
+SANITY_DIR = "#{ENV["HOME"]}/Downloads/filterizer/".freeze
 
 desc "Export models for Sanity"
 task export: :environment do
@@ -14,7 +14,7 @@ task export: :environment do
         "fields" => attr
       }
       # rubocop:disable Style/FileWrite
-      File.open(DIR + "#{name}.yaml", "w") do |f|
+      File.open(SANITY_DIR + "#{name}.yaml", "w") do |f|
         f.write(data.to_yaml)
       end
       # rubocop:enable Style/FileWrite
